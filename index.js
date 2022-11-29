@@ -4,7 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const config = require('config')
 const routes = require('./routes/routes')
-const corsModdleware = require('./middleware/cors.middleware')
+const corsModdleware = require('./mw/middleware')
 
 
 const app = express()

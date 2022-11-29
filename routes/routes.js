@@ -38,11 +38,11 @@ router.post('/send',
         if (!errors.isEmpty()) {
             return res.status(400).json({message: "Uncorrect request", errors})
         }
-        const {sender, recipient, title, content} = req.body
+        const {sender, recipient, title, content, time} = req.body
         
     
 
-        const message = new Message({sender, recipient, title, content})
+        const message = new Message({sender, recipient, title, content,time})
         await message.save()
         res.json({message: "Message sent"})
     } catch (e) {
